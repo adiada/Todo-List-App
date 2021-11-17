@@ -14,7 +14,8 @@ module.exports = function(app){
     mongoose.connect(dbURI.dbURI,{useNewUrlParser : true,useUnifiedTopology : true})
     .then((result)=> {  console.log('connected to db');
                         app.listen(3000);
-                        console.log('You are listening to port 3000');})
+                        console.log('You are listening to port 3000');
+                        console.log('You can access your website at http://localhost:3000/todo');})
     .catch((e) => {console.log('Error:',e.message)});
 
     //redirect for home
