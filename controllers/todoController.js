@@ -13,14 +13,23 @@ const dbURI = 'mongodb+srv://adharsh:12345@cluster0.g4uq0.mongodb.net/node-tuts?
 module.exports = function(app){
 
     // app.use(bodyParser.json())
+    
     mongoose.connect(dbURI,{useNewUrlParser : true,useUnifiedTopology : true})
     .then((result)=> {  console.log('connected to db');
                         app.listen(3000);
                         console.log('You are listening to port 3000');})
     .catch((e) => {console.log('Error:',e.message)});
 
+    app.get('/',(req,res)=>{
+        res.redirect('/todo');
+    })
+
     app.get('/todo',function(req,res){
-        res.render('todo',{todos:data});
+        Todo.find().sort({createdAt:1}).then((result) => {
+            res.render('todo',{todos:result});
+        })
+        .catch((e) => {console.log('Error',e.message)})
+        
     })
 
 
