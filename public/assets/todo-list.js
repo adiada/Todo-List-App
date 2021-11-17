@@ -1,27 +1,3 @@
-// $(document).ready(function(){
-
-// const { response } = require("express");
-
-//   $('form').on('submit', function(){
-
-//       var item = $('form input');
-//       var todo = {item: item.val()};
-
-//       $.ajax({
-//         type: 'POST',
-//         url: '/todo',
-//         data: todo,
-//         success: function(data){
-//           //do something with the data via front-end framework
-//           location.reload();
-//         }
-//       });
-
-//       return false;
-
-//   });
-
-
 const myForm = document.getElementById('todoForm');
 
 myForm.addEventListener('submit',async function(e){
@@ -67,6 +43,34 @@ for( let i = 0 ; i < liElements.length ; i++){
       }
 });
 }
+
+
+//OlderAJAX code
+
+// $(document).ready(function(){
+
+// const { response } = require("express");
+
+//   $('form').on('submit', function(){
+
+//       var item = $('form input');
+//       var todo = {item: item.val()};
+
+//       $.ajax({
+//         type: 'POST',
+//         url: '/todo',
+//         data: todo,
+//         success: function(data){
+//           //do something with the data via front-end framework
+//           location.reload();
+//         }
+//       });
+
+//       return false;
+
+//   });
+
+
 
 
   // $('li').on('click', function(){
