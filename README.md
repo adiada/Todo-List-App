@@ -8,6 +8,31 @@ I have hidden the mongodb connection string for security purposes. However you a
 
 There is an api endpoint available at 'localhost:3000/api/todolist' for getting all the details of the data. 
 
+## Directory Structure
+```sh
+│   .gitignore
+│   app.js
+│   package-lock.json
+│   package.json
+│   README.md
+│
+├───controllers
+│       dbURI.js
+│       todoController.js
+│
+├───models
+│       todo.js
+│
+├───node_modules
+│
+├───public
+│   └───assets
+│           logo.png
+│           ninjaLogo.png
+│           styles.css
+│           todo-list.js
+```
+
 The main resources I haved used is :
 * Net ninja NodeJS Tutorials (have used additional updated resources)
 * Stackoverflow
