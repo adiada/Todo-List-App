@@ -4,14 +4,14 @@ let Todo = require('../models/todo')
 
 
 //mongodb connection string
-const dbURI = require('./dbURI');
+// const dbURI = require('./dbURI');
 
 
 module.exports = function(app){
 
 
     //connecting with the mongodb database
-    mongoose.connect(dbURI.dbURI,{useNewUrlParser : true,useUnifiedTopology : true})
+    mongoose.connect(process.env.DB_URI,{useNewUrlParser : true,useUnifiedTopology : true})
     .then((result)=> {  console.log('connected to db');
                         app.listen(3000);
                         console.log('You are listening to port 3000');
