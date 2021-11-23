@@ -1,2 +1,3 @@
 /node_modules
 dbURI.js
+.serverless/

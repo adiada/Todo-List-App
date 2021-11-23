@@ -1,3 +1,4 @@
+let serverless = require('serverless-http');
 let express = require('express');
 let todoController = require('./controllers/todoController');
 
@@ -18,3 +19,6 @@ app.use(express.static('./public'))
 todoController(app);
 
 //listen to port
+
+
+module.exports.handler = serverless(app);
