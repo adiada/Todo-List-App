@@ -15,6 +15,13 @@ There is an api endpoint available at 'localhost:3000/api/todolist' for getting 
 │   package-lock.json
 │   package.json
 │   README.md
+│   serverless.yml
+│
+├───.serverless
+│       cloudformation-template-create-stack.json
+│       cloudformation-template-update-stack.json
+│       serverless-state.json
+│       Todo-app.zip
 │
 ├───controllers
 │       dbURI.js
