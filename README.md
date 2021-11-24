@@ -53,5 +53,7 @@ The main resources I haved used is :
 * (And a couple of other references)
 
 
-
+Corrections to be made:
+* use process.env.PORT || 3000
+* see how to add environment variables(in our case dbURI) to aws hosting environment
 
