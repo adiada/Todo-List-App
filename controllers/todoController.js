@@ -1,7 +1,7 @@
 let express = require('express')
 let mongoose = require('mongoose')
 let Todo = require('../models/todo')
-
+let port = process.env.port || 3000
 
 //mongodb connection string
 // const dbURI = require('./dbURI');
@@ -13,9 +13,9 @@ module.exports = function(app){
     //connecting with the mongodb database
     mongoose.connect(process.env.DB_URI,{useNewUrlParser : true,useUnifiedTopology : true})
     .then((result)=> {  console.log('connected to db');
-                        app.listen(3000);
-                        console.log('You are listening to port 3000');
-                        console.log('You can access your website at http://localhost:3000/todo');})
+                        app.listen(port);
+                        console.log(`You are listening to port ${port}`);
+                        console.log(`You can access your website at http://localhost:${port}/todo`);})
     .catch((e) => {console.log('Error:',e.message)});
 
     //redirect for home
