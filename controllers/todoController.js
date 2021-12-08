@@ -20,7 +20,7 @@ module.exports = function(app){
 
     //redirect for home
     app.get('/',(req,res)=>{
-        res.redirect('/todo');
+        res.redirect('/dev/todo');
     })
 
     //api end point
@@ -38,8 +38,9 @@ module.exports = function(app){
     })
 
 
-    app.post('/todo',express.json({type:"*/*"}),function(req,res){
+    app.post('/dev/todo',express.json({type:"*/*"}),function(req,res){
         
+        console.log('reached here')
         let todo = new Todo(req.body) 
         todo.save()
         .then((result)=>{console.log('result:',result);res.json(result)})

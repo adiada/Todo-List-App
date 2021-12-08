@@ -42,7 +42,7 @@ There is an api endpoint available at 'localhost:3000/api/todolist' for getting 
 
 ### LINK  
 
-https://7tr0vboc0e.execute-api.us-east-1.amazonaws.com/todo
+https://7tr0vboc0e.execute-api.us-east-1.amazonaws.com/dev/todo
 
 ### References
 

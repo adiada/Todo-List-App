@@ -16,11 +16,17 @@ provider:
 
 
 functions:
-  handler:
+  app:
     handler: app.handler
     events:
-      - http: ANY /
-
+      - http:
+          path: /
+          method: ANY
+          cors: true
+      - http:
+          path: /{proxy+}
+          method: ANY
+          cors: true
 
       
 #    The following are a few example events you can configure

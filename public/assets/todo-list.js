@@ -7,12 +7,12 @@ myForm.addEventListener('submit',async function(e){
     const formData = new FormData(this);
     const formDataSerialized = Object.fromEntries(formData);
 
-    fetch('/todo', {
+    fetch('/dev/todo', {
           
             method:'post',
             body:JSON.stringify(formDataSerialized), 
     })
-    .then( (resp) => { location.reload(); return resp.text()})
+    .then( (resp) => { alert('hey im touched!');location.reload(); return resp.text()})
     .then( txtData => console.log(txtData))
     .catch( e => console.log('error',e.message));
 
