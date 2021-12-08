@@ -13,6 +13,7 @@ module.exports = function(app){
     //connecting with the mongodb database
     mongoose.connect(process.env.DB_URI,{useNewUrlParser : true,useUnifiedTopology : true})
     .then((result)=> {  console.log('connected to db');
+                        console.log('supposed port',port)
                         console.log('port:',process.env.PORT)
                         app.listen(process.env.PORT);
                         console.log(`You are listening to port ${port}`);
