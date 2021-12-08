@@ -12,7 +12,7 @@ myForm.addEventListener('submit',async function(e){
             method:'post',
             body:JSON.stringify(formDataSerialized), 
     })
-    .then( (resp) => { alert('hey im touched!');location.reload(); return resp.text()})
+    .then( (resp) => { location.reload(); return resp.text()})
     .then( txtData => console.log(txtData))
     .catch( e => console.log('error',e.message));
 
