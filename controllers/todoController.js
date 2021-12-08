@@ -15,7 +15,7 @@ module.exports = function(app){
     .then((result)=> {  console.log('connected to db');
                         console.log('supposed port',port)
                         console.log('port:',process.env.PORT)
-                        app.listen(process.env.PORT);
+                        app.listen(port);
                         console.log(`You are listening to port ${port}`);
                         console.log(`You can access your website at http://localhost:${port}/todo`);})
     .catch((e) => {console.log('Error:',e.message)});
